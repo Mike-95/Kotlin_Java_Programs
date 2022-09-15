@@ -20,5 +20,60 @@ fun swapTwoNumbers(){
     b = temp // b 10
     println("Value of a is $temp; Value of b is $a")
     println("After swaping, Value of a is $a; Value of b is $temp")
-
 }
+
+//#3 "Sum of two numbers by receiving value from keyboard
+fun sumOfTwoNumbersByReceivingValue(){
+    println("Enter value a")
+    var a = readLine()?.toInt()
+    println("Enter value b")
+    val b = readLine()?.toInt()
+    val sum = b?.let { a?.plus(it) }
+    println("Sum of value a and b is: $sum")
+}
+//#4 "Reverse number"
+fun reverseNumber(){
+    println("Enter any number to reverse!")
+    var inputNumber = readLine()?.toInt()
+    var reversed = 0
+    while (inputNumber!! >0){
+        val temp = inputNumber %10
+            reversed = reversed * 10 + temp
+            inputNumber = inputNumber / 10
+    }
+    println(reversed)
+}
+
+//#5 "Arithmetic operators
+fun arithmeticOperators(){
+    //Addition
+    println("Enter two values for addition")
+    val additionA = readLine()?.toInt()
+    val additionB = readLine()?.toInt()
+    val addition = additionA!! + additionB!!
+    println("Addition value of $additionA and $additionB is $addition")
+
+    //Subtraction
+    println("Enter two values for subtraction")
+    val subtractionA = readLine()?.toInt()
+    val subtractionB = readLine()?.toInt()
+    val subtraction = subtractionA!! - subtractionB!!
+    println("Subtraction value of $subtractionA and $subtractionB is $subtraction")
+
+    //Multiplication
+    println("Enter two values for multiplication")
+    val multiplicationA = readLine()?.toInt()
+    val multiplicationB = readLine()?.toInt()
+    val multiplication = multiplicationA!! * multiplicationB!!
+    println("Multiplication value of $multiplicationA and $multiplicationB is $multiplication")
+
+    //Division
+    println("Enter two values for division")
+    val divisionA = readLine()?.toInt()
+    val divisionB = readLine()?.toInt()
+    val division = divisionA!! / divisionB!!
+    println("Division value of $divisionA and $divisionB is $division")
+}
+
+
+
