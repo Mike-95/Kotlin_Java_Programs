@@ -161,7 +161,7 @@ fun leapYear() {
     if (input != null) {
         if ((input % 4 == 0) || (input % 400 == 0) && (input % 100 != 0)) {
             println("The inputted year - $input is a leap year")
-        }else{
+        } else {
             println("The inputted year - $input is not a leap year")
         }
 
@@ -169,12 +169,38 @@ fun leapYear() {
 }
 
 //#13 "Convert string to CharArray"
-fun stringToCharArray(){
-    val string  = "I love Kotlin"
+fun stringToCharArray() {
+    val string = "I love Kotlin"
     val charAr = string.toCharArray()
     for (i in charAr.indices)
-    print(charAr[i]+ " ")
+        print(charAr[i] + " ")
 }
+
+//#14 "List even numbers"
+fun listEvenNumbers() {
+    println("Enter a value need find even numbers")
+    val input = readLine()?.toInt()
+    if (input != null) {
+        for (i in 1..input)
+            if (i % 2 == 0) {
+                print(" $i")
+            }
+    }
+}
+
+//#15 "List odd number
+fun listOddNumbers() {
+    println("Enter a value need find odd numbers")
+    val input = readLine()?.toInt()
+    if (input != null) {
+        for (i in 1..input)
+            if (i % 2 != 0) {
+                print(" $i")
+            }
+    }
+}
+
+
 
 
 
