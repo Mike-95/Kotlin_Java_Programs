@@ -1,4 +1,4 @@
 fun main() {
-    palindromeNumber()
+    stringToCharArray()
 
 }

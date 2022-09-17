@@ -75,7 +75,7 @@ fun arithmeticOperators() {
     println("Division value of $divisionA and $divisionB is $division")
 }
 
-//#5 "increment and decrement operator"
+//#6 "increment and decrement operator"
 fun incrementAndDecrement() {
     var a = 10 //a->10
     var b = 20 //b->
@@ -85,7 +85,7 @@ fun incrementAndDecrement() {
     println("value of a is: $a; value of b is: $b; value of k is $k")
 }
 
-//#5 "Modulus operator"
+//#7 "Modulus operator"
 fun modulusOperator() {
     //print even and odd numbers
     val listArray = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -99,7 +99,7 @@ fun modulusOperator() {
     }
 }
 
-// #6 "Factorial"
+// #8 "Factorial"
 fun factorial() {
     var i = 1
     var fact = 1
@@ -112,7 +112,7 @@ fun factorial() {
 
 }
 
-//#7 Fibonacci
+//#10 Fibonacci
 fun fibonacci() {
     var n1 = 0
     var n2 = 1
@@ -130,7 +130,7 @@ fun fibonacci() {
     }
 }
 
-//#8 "Palindrome number"
+//#11 "Palindrome number"
 fun palindromeNumber() {
     var r: Int? = null
     var sum = 0
@@ -152,6 +152,28 @@ fun palindromeNumber() {
     } else {
         println("Your input - $temp is not palindrome number")
     }
+}
+
+//#12 "Leap year"
+fun leapYear() {
+    println("Enter a year to find out is it a leap year or not?!")
+    val input = readLine()?.toInt()
+    if (input != null) {
+        if ((input % 4 == 0) || (input % 400 == 0) && (input % 100 != 0)) {
+            println("The inputted year - $input is a leap year")
+        }else{
+            println("The inputted year - $input is not a leap year")
+        }
+
+    }
+}
+
+//#13 "Convert string to CharArray"
+fun stringToCharArray(){
+    val string  = "I love Kotlin"
+    val charAr = string.toCharArray()
+    for (i in charAr.indices)
+    print(charAr[i]+ " ")
 }
 
 
