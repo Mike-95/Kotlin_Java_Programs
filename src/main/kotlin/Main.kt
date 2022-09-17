@@ -1,3 +1,4 @@
-fun main(){
-    arithmeticOperators()
+fun main() {
+    palindromeNumber()
+
 }

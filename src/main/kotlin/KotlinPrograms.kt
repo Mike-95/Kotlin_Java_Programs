@@ -1,16 +1,15 @@
-
 //Kotlin Programs
 
 //#1 "Sum of two numbers"
-fun sumOfTwoNumbers(){
+fun sumOfTwoNumbers() {
     val a = 10
     val b = 30
-    val c = a+b
+    val c = a + b
     println(c)
 }
 
 //#2 "Swap two numbers"
-fun swapTwoNumbers(){
+fun swapTwoNumbers() {
     println("Enter a value!")
     var a = readLine()?.toInt() //10
     println("Enter b value!")
@@ -23,7 +22,7 @@ fun swapTwoNumbers(){
 }
 
 //#3 "Sum of two numbers by receiving value from keyboard
-fun sumOfTwoNumbersByReceivingValue(){
+fun sumOfTwoNumbersByReceivingValue() {
     println("Enter value a")
     var a = readLine()?.toInt()
     println("Enter value b")
@@ -31,21 +30,22 @@ fun sumOfTwoNumbersByReceivingValue(){
     val sum = b?.let { a?.plus(it) }
     println("Sum of value a and b is: $sum")
 }
+
 //#4 "Reverse number"
-fun reverseNumber(){
+fun reverseNumber() {
     println("Enter any number to reverse!")
     var inputNumber = readLine()?.toInt()
     var reversed = 0
-    while (inputNumber!! >0){
-        val temp = inputNumber %10
-            reversed = reversed * 10 + temp
-            inputNumber = inputNumber / 10
+    while (inputNumber!! > 0) {
+        val temp = inputNumber % 10
+        reversed = reversed * 10 + temp
+        inputNumber = inputNumber / 10
     }
     println(reversed)
 }
 
 //#5 "Arithmetic operators
-fun arithmeticOperators(){
+fun arithmeticOperators() {
     //Addition
     println("Enter two values for addition")
     val additionA = readLine()?.toInt()
@@ -73,6 +73,85 @@ fun arithmeticOperators(){
     val divisionB = readLine()?.toInt()
     val division = divisionA!! / divisionB!!
     println("Division value of $divisionA and $divisionB is $division")
+}
+
+//#5 "increment and decrement operator"
+fun incrementAndDecrement() {
+    var a = 10 //a->10
+    var b = 20 //b->
+    a++
+    var k = ++a
+    b--
+    println("value of a is: $a; value of b is: $b; value of k is $k")
+}
+
+//#5 "Modulus operator"
+fun modulusOperator() {
+    //print even and odd numbers
+    val listArray = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+    for (i in listArray) {
+        if (i % 2 != 0) {
+            println("odd $i")
+        } else {
+            println("even $i")
+        }
+    }
+}
+
+// #6 "Factorial"
+fun factorial() {
+    var i = 1
+    var fact = 1
+    val number = 5
+    while (i <= number) {
+        fact = fact * i
+        i++
+    }
+    println("Factorial of $number is $fact")
+
+}
+
+//#7 Fibonacci
+fun fibonacci() {
+    var n1 = 0
+    var n2 = 1
+    var n3: Int? = null
+    var i = 2
+    var count = 10
+
+    print("$n1 $n2")
+    while (i < count) {
+        i++
+        n3 = n1 + n2
+        print(" " + n3)
+        n1 = n2
+        n2 = n3
+    }
+}
+
+//#8 "Palindrome number"
+fun palindromeNumber() {
+    var r: Int? = null
+    var sum = 0
+    var temp: Int? = null
+    println("Input any number!")
+    var input: Int? = null
+    input = readLine()?.toInt()
+    temp = input
+
+    if (input != null) {
+        while (input > 0) {
+            r = input % 10 //getting reminder
+            sum = (sum * 10) + r
+            input /= 10
+        }
+    }
+    if (temp == sum) {
+        println("Your input - $temp  is palindrome number ")
+    } else {
+        println("Your input - $temp is not palindrome number")
+    }
 }
 
 
