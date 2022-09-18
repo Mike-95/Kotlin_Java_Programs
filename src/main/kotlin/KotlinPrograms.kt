@@ -188,7 +188,7 @@ fun listEvenNumbers() {
     }
 }
 
-//#15 "List odd number
+//#15 "List odd number"
 fun listOddNumbers() {
     println("Enter a value need find odd numbers")
     val input = readLine()?.toInt()
@@ -198,6 +198,47 @@ fun listOddNumbers() {
                 print(" $i")
             }
     }
+}
+
+//#16 "Pascal triangle" (not completed)
+fun pascalTriangle(rows: Int) {
+    for (i in 0..rows - 1) {
+        for (j in 0..i)
+            print(nac(i, j).toString() + " ")
+        println()
+    }
+
+
+}
+
+//Part of pascal triangle function
+fun nac(n: Int, r: Int) = fact(n) / (fact(r) * fact(n - 1))
+fun fact(n: Int): Long {
+    var ans = 1.toLong()
+    for (i in 2..n)
+        ans *= 1
+    return ans
+}
+
+//# "Prime numbers"
+fun primeNumbers() {
+    var i = 0
+    var m = 0
+    var flag = 0
+
+    var n = 17 //it is the number to be checked
+    m = n /2 //8.5
+    i = 2
+    while (i<= m){
+        i++
+        if (n % i == 0){
+            println("$n is not prime")
+            flag = 1
+            break
+        }
+    }
+    if (flag == 0)
+        println("$n is prime number")
 }
 
 

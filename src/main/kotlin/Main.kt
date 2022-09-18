@@ -1,4 +1,4 @@
-fun main() {
-    listOddNumbers()
+fun main(args: Array<String>) {
+   primeNumbers()
 
 }
